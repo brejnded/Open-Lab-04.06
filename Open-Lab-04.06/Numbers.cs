@@ -1,4 +1,3 @@
-﻿using System;
 
 namespace Open_Lab_04._06
 {
@@ -6,7 +5,24 @@ namespace Open_Lab_04._06
     {
         public int[] NoOdds(int[] numbers)
         {
-            throw new NotImplementedException();
+            int count = 0;
+            for (int i = 0; i < numbers.Length; i++)
+                if (numbers[i] % 2 == 0)
+                {
+                    count++;
+                }
+            int k = 0;
+            int[] A = new int[count];
+                    for (int j = 0; j < numbers.Length; j++)
+            {
+                if (numbers[j] % 2 == 0)
+                {
+                    A[k] = numbers[j];
+                    k++;
+                }
+            }
+            return A;
+            }
+    
         }
-    }
 }
